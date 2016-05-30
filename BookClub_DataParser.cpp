@@ -5,18 +5,18 @@
 
 using namespace std;
 
-struct bookType{
-  string bookTitle;
-  int numOfMaleAuthors;
-  int numOfFemaleAuthors;
-  int yearPublished;
-  string genres[];
-  int numOfWords;
+class Book {
+  public: 
+    /* Instance Variables */
+    int publishDate;
+    string authorFirstName;
+    string authorLastName;
+    char gender;
+    string bookTitle;
+    string genres[];
+    
+    /* Instance Methods */
 };
-
-
-
-/*Read in data from file */
 
 int main() {
   cout << "Book Club Data Parser" << endl;
@@ -35,9 +35,8 @@ int main() {
 
   cout << "Name of file is " << fileName << endl;
 
-  /* Data storage variablse */
-  int numOfBooksRead = 0;
-  bookType book[numOfBooks];
+  /* Data storage variables using Book Class*/
+  Book booksRead[numOfBooks];
 
   /* Read in File Data */
   ifstream bookClubData;
